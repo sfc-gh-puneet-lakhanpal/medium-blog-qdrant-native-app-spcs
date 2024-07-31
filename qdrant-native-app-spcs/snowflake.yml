@@ -1,0 +1,17 @@
+# This is a project definition file, a required component if you intend to use Snowflake CLI in a project directory such as this template.
+
+definition_version: 1
+native_app:
+  name: qdrant_native_app_on_spcs_snowflake
+  artifacts:
+    - src: app/*
+      dest: ./
+  package:
+    name: qdrant_on_spcs_app_pkg
+    role: qdrant_provider_role
+    warehouse: qdrant_provider_wh
+  application:
+    name: qdrant_on_spcs_app
+    debug: true
+    role: qdrant_provider_role
+    warehouse: qdrant_provider_wh
